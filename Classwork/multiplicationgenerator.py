@@ -1,5 +1,6 @@
 '''collected my number input
 did range 
+get the result by multiplying th nuber and my number counter
 and print output'''
 
 
