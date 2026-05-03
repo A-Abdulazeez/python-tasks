@@ -67,3 +67,19 @@ class TestApplyInterest (TestCase):
 	def test_that_compound_interest_ives_correct_value(self):
 		expected = pybank.apply_interest(1000, 1, 1)
 		self.assertEqual(expected, 
+		
+class TestApplyInterestFunction(unittest.TestCase):
+	def test_that_apply_interest_function_exists(self):
+		pybank.apply_interest(1000, 12, 3)
+	def test_that_apply_interest_returns_zero_if_rate_is_negative(self):
+		actual = pybank.apply_interest(1000, -1, 3)
+		expected = 0
+		self.assertEqual(actual, expected)
+	def test_that_apply_interest_returns_zero_if_years_is_less_than_one(self):
+		actual = pybank.apply_interest(1000, 12, 0)
+		expected = 0
+		self.assertEqual(actual, expected)
+	def test_that_apply_interest_returns_returns_correct_interest(self):
+		actual = pybank.apply_interest(1000, 10, 1)
+		expected = 1100
+		self.assertEqual(actual, expected)
