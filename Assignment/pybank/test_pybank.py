@@ -68,7 +68,7 @@ class TestApplyInterest (TestCase):
 		expected = pybank.apply_interest(1000, 1, 1)
 		self.assertEqual(expected, 
 		
-class TestApplyInterestFunction(unittest.TestCase):
+class TestApplyInterestFunction(TestCase):
 	def test_that_apply_interest_function_exists(self):
 		pybank.apply_interest(1000, 12, 3)
 	def test_that_apply_interest_returns_zero_if_rate_is_negative(self):
